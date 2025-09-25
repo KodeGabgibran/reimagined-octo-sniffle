@@ -1,0 +1,167 @@
+/* HEADER (bagian biru) */
+.header{
+  position: relative;
+  height: 200px;
+  background: linear-gradient(180deg, var(--accent), #0b8bd6 80%);
+  color: white;
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.header-bg{
+  display: none; /* kalau mau gunakan bg image ganti display */
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  inset:0;
+  z-index:0;
+  opacity:0.2;
+}
+
+.header-content{
+  width: 100%;
+  z-index: 2;
+}
+
+/* brand row */
+.brand-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+}
+
+.brand-left .small{
+  font-size:13px;
+  opacity:0.9;
+}
+.brand-left .big{
+  font-size:28px;
+  font-weight:700;
+  margin-top:6px;
+}
+.brand-left .muted{
+  font-size:13px;
+  color: rgba(255,255,255,0.85);
+  margin-top:4px;
+}
+
+.logo{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  opacity:0.95;
+}
+
+/* action buttons */
+.actions{
+  margin-top:14px;
+  display:flex;
+  gap:10px;
+}
+.pill{
+  border: none;
+  padding:8px 14px;
+  border-radius:20px;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+.pill.deposit{
+  background: white;
+  color: var(--accent);
+}
+.pill.withdraw{
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+
+/* CHART */
+.chart{
+  padding: 12px 14px;
+  background: linear-gradient(180deg, rgba(10,163,255,0.03), transparent);
+}
+.chart img{
+  width:100%;
+  border-radius:8px;
+  display:block;
+}
+
+/* TABS */
+.tabs{
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  padding:10px 12px;
+  background:#fff;
+}
+.tab{
+  flex:1;
+  padding:8px 10px;
+  border-radius:8px;
+  border: none;
+  background: #f6f7f8;
+  font-weight:700;
+  cursor:pointer;
+}
+.tab.active{
+  background: linear-gradient(90deg, rgba(10,163,255,0.12), rgba(11,139,214,0.12));
+  color: var(--accent);
+  box-shadow: 0 4px 12px rgba(10,163,255,0.06);
+}
+
+/* STOCK LIST */
+.stock-list{
+  padding: 8px 12px 20px 12px;
+  background: #fafafa;
+}
+.stock{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  background: #fff;
+  border-radius:8px;
+  margin-bottom:10px;
+  box-shadow: 0 2px 6px rgba(14,14,14,0.03);
+}
+.stock .left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width: 140px;
+}
+.logo-sm{
+  width:36px;
+  height:36px;
+  object-fit:contain;
+}
+.sym{
+  font-weight:700;
+  font-size:15px;
+}
+.center{
+  flex:1;
+  text-align:center;
+  font-weight:700;
+}
+.right{
+  min-width:80px;
+  text-align:right;
+  font-weight:700;
+}
+
+/* warna */
+.red{ color: var(--danger); }
+.green{ color: var(--success); }
+
+/* RESPONSIVE (mobile tweak) */
+@media (max-width:420px){
+  .header{ height: 220px; padding:16px; }
+  .brand-left .big{ font-size:24px; }
+  .stock{ padding:10px; gap:8px; }
+  .logo-sm{ width:32px; height:32px; }
+}

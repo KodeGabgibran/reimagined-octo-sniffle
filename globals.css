@@ -1,0 +1,34 @@
+/* Reset dan variable global */
+:root{
+  --accent: #0aa3ff;    /* biru header */
+  --muted: #9aa3ad;
+  --bg: #f3f4f6;
+  --card: #ffffff;
+  --danger: #e04646;
+  --success: #2b9e44;
+  --max-width: 420px;
+  --radius: 10px;
+}
+
+/* Reset sederhana */
+* { box-sizing: border-box; }
+html,body { height:100%; }
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  color: #222;
+}
+
+/* Container tengah */
+.container{
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 20px auto;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(10,10,12,0.08);
+}
